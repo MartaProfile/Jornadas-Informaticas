@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Jornadas de Informática - Formulario</title>
+  </head>
+  <body>
+
+    <include src="./views/header.html"></include>
+
+    <div class="img-container">
+
+      <img class="img-container__estilo" src="assets/images/poster2.webp" alt="Póster Jornadas Informáticas">
+      
+      <main class="container-md container-custom">
+
+        <section class="seccion-form">
+
+          <div class="seccion-form__contenedor">
+
+            <h2 class="seccion-form__titulo">Formulario de Inscripción</h2>
+            <p class="seccion-form__texto">Por favor, completa el siguiente formulario para inscribirte en las jornadas de seguridad informática.</p>
+          
+            <form class="row g-3">
+              <!-- Nombre y Apellidos -->
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label seccion-form__label" for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre" type="text" placeholder="Introduce tu nombre" aria-label="First name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label seccion-form__label" for="apellidos">Apellidos</label>
+                  <input class="form-control" id="apellidos" type="text" placeholder="Introduce tus apellidos" aria-label="Last name" required>
+                </div>
+              </div>
+          
+              <!-- Correo Electrónico -->
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label seccion-form__label" for="inputEmail4">Correo Electrónico</label>
+                  <input class="form-control" id="inputEmail4" type="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label  class="form-label seccion-form__label" for="inputPassword4">Password</label>
+                  <input class="form-control" id="inputPassword4" type="password">
+                </div>
+              </div>
+          
+              <!-- Estudios y Profesión -->
+              <div class="row">
+                <div class="col-12">
+                  <label  class="form-label seccion-form__label" for="inputEstudios">Estudios</label>
+                  <input class="form-control" id="inputEstudios" type="text" placeholder="Introduce tus estudios">
+                </div>
+                <div class="col-12">
+                  <label  class="form-label seccion-form__label" for="inputProfesion">Profesión</label>
+                  <input class="form-control" id="inputProfesion" type="text" placeholder="Introduce tu profesión">
+                </div>
+              </div>
+          
+              <!-- Selección de Ponencias -->
+              <div class="col-12">
+                <p class="seccion-form__ponencias">Selecciona las ponencias a las que deseas asistir:</p>
+                
+                <div class="form-check form-switch">
+                  <input class="form-check-input" id="ponenciaNube" type="checkbox">
+                  <label class="form-check-label seccion-form__check" for="ponenciaNube">Seguridad en la Nube</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                  <input class="form-check-input" id="ponenciaEncriptacion" type="checkbox">
+                  <label class="form-check-label seccion-form__check" for="ponenciaEncriptacion">Encriptación Avanzada</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                  <input class="form-check-input" id="ponenciaCiberdefensa" type="checkbox">
+                  <label class="form-check-label seccion-form__check" for="ponenciaCiberdefensa">Ciberdefensa: Nuevas Amenazas</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                  <input class="form-check-input" id="ponenciaNuevasTecnologias" type="checkbox">
+                  <label class="form-check-label seccion-form__check" for="ponenciaNuevasTecnologias">Nuevas Tecnologías en Ciberseguridad</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                  <input class="form-check-input" id="ponenciaMitigacion" type="checkbox">
+                  <label class="form-check-label seccion-form__check" for="ponenciaMitigacion">Mitigación de Ataques Cibernéticos</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                  <input class="form-check-input" id="ponenciaIA" type="checkbox">
+                  <label class="form-check-label seccion-form__check" for="ponenciaIA">La IA en la Ciberseguridad</label>
+                </div>
+              </div>
+          
+              <!-- Botón de Envío -->
+              <div class="col-12">
+                <button class="btn btn-primary seccion-form__boton" type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+
+        </section>
+        
+      </main>
+    </div>
+
+    <include src="./views/footer.html"></include>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

@@ -1,27 +1,80 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Jornadas de Informática</title>
   </head>
+
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+
+    <include src="./views/header.html"></include>
+
+
+    <main class="poster">
+      
+      <img class="poster__img" src="assets/images/poster2.webp" alt="Póster Jornadas Informáticas">
+      
+      <header class="poster__header">
+        <h1 class="poster__header--titulo">III Jornadas de Seguridad Informática</h1>
+        <p class="poster__header--text">Bienvenidos a las III Jornadas de Seguridad Informática. Durante 2 días podrás asistir a las ponencias con los profesionales más punteros del sector.</p>
+      </header>
+
+      <section class="poster__agendaUno">
+        <ul class="poster__agenda">
+          <h2 class="poster__agenda--titulo">Agenda del Día 1</h2>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">09:00</span> - La importancia de proteger los datos en la nube.</li>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">11:00</span> - Técnicas de encriptación avanzada.</li>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">14:00</span> - Tendencias emergentes en defensa cibernética.</li>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">16:00</span> - Charla sobre ética en la ciberseguridad.</li>
+        </ul>
+      </section>
+
+      <section class="poster__agendaDos">
+        <ul class="poster__agenda">
+          <h2 class="poster__agenda--titulo">Agenda del Día 2</h2>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">09:30</span> - Nuevas tecnologías en ciberseguridad.</li>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">12:00</span> - Estrategias de mitigación de ataques cibernéticos.</li>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">15:00</span> - El futuro de la ciberseguridad en la era de la IA.</li>
+          <li class="poster__agenda--item"><span class="poster__agenda--time">17:00</span> - Clausura y entrega de premio.</li>
+        </ul>
+      </section>
+
+      <button class="btn btn-dark btn-lg poster__boton" data-bs-toggle="modal" data-bs-target="#inscripcionModal" type="button">¡APÚNTATE!</button>
+
+      <div class="modal fade" id="inscripcionModal" aria-labelledby="inscripcionModalLabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="inscripcionModalLabel">Pasos para Inscribirse</h5>
+              <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <ol>
+                <li>Accede a la <a href="formyfotos.html" target="_blank">página oficial de inscripción</a>.</li>
+                <li>Completa el formulario con tus datos personales y profesionales.</li>
+                <li>Selecciona las sesiones a las que deseas asistir.</li>
+                <li>Recibirás un correo de confirmación con tu entrada electrónica y detalles del evento.</li>
+              </ol>
+              <p>Si tienes alguna duda o necesitas ayuda adicional, puedes contactarnos en <a href="mailto:info@jornadasinformaticas.com">info@jornadasinformaticas.com</a>.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Cerrar</button>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
     <include src="./views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
   </body>
+
 </html>

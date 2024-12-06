@@ -1,0 +1,7 @@
+@function adjust-color-brightness($color, $amount) {
+  @if $amount > 0 {
+    @return lighten($color, $amount);
+  } @else {
+    @return darken($color, abs($amount));
+  }
+}

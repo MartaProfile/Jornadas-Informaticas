@@ -1,0 +1,121 @@
+/* FORMULARIO */
+
+.seccion-form {
+  container-type: inline-size;
+  z-index: 2;
+  position: relative;
+  padding: 2dvh 2dvw;
+  margin: 3dvh auto;
+  background-color: color(display-p3 0 0.2 0.4 / 80%);
+  background-color: $back-color;
+  border-radius: 5rem;
+
+  &__contenedor {
+    width: 70dvw; // 90%
+    max-width: 50lvw; // 1200px
+    margin: 0 auto;
+  }
+
+  &__titulo {
+    margin-bottom: 3dvh; // 3rem
+    font-size: 3rem; // 3rem
+    text-align: center;
+    color: color(display-p3 1 1 0);
+    color: $color-alert;
+  }
+
+  &__texto {
+    margin: 2dvh auto; // 2rem
+    color: color(display-p3 1 1 1);
+    color: $secondary-color;
+  }
+
+  &__label {
+    margin-top: 2dvh; // 1rem
+    font-weight: bold;
+    font-size: 1rem; // 1rem
+    color: color(display-p3 1 1 0);
+    color: $color-alert;
+  }
+
+  &__ponencias {
+    margin: 2dvh auto; // 1.5rem
+    color: color(display-p3 1 1 1);
+    color: $secondary-color;
+  }
+
+  &__check {
+    margin-bottom: 0.5dvh; // 0.5rem
+    color: color(display-p3 1 1 0);
+    color: $color-alert;
+  }
+
+  &__boton[type='submit'] {
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 250px;
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: $primary-color;
+    text-align: center;
+    background-color: $color-alert;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color;
+      background-color: adjust-color-brightness($color-alert, 25%);
+    }
+  }
+}
+
+
+@container (max-width: 600px) {
+
+  .seccion-form__boton { background-color: $color-container; }
+
+  .seccion-form__label { color: $color-container; }
+}
+
+
+@media (width <= 768px) {
+  .seccion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__contenedor {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 2dvh;
+      margin: 0 auto;
+    }
+
+    &__titulo,
+    &__texto {
+      margin-bottom: 4dvh;
+    }
+
+    &__label {
+      margin-top: 3dvh;
+    }
+  }
+}
+
+
+@media (width <= 480px) {
+  :is(.seccion-form__texto, .seccion-form__label, .seccion-form__ponencias, .seccion-form__check) {
+    font-size: 0.9rem;
+  }
+
+  .seccion-form {
+    &__titulo {
+      font-size: $font-size-large;
+    }
+  }
+}
