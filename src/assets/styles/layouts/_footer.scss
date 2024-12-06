@@ -6,6 +6,13 @@
   justify-content: space-between;
   background-color: $primary-color;
   padding: 2rem 8rem;
+  box-sizing: border-box;
+
+  &__img {
+    align-self: center;
+    border-radius: 100%;
+  }
+
 }
 
 .footer-nav {
@@ -72,13 +79,25 @@
   .footer-contenedor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
+    place-items: center;
     gap: 3rem;
     padding: 1rem 3rem;
+
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .nav-redes {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 0.3rem;
+
     &__img {
+      justify-content: center;
       height: 20px;
       width: 20px;
     }

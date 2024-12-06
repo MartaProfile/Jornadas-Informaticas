@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding: 2rem 8rem;
   background-color: $primary-color;
+  box-sizing: border-box;
   
   &__img {
     align-self: center;
@@ -62,7 +63,11 @@
     }
   
     &__nav {
-      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
 
       &--link {
         font-size: $font-size-small;
