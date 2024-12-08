@@ -1,62 +1,14 @@
 /* HEADER */
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 8rem;
-  background-color: $primary-color;
-  box-sizing: border-box;
-  
-  &__img {
-    align-self: center;
-    border-radius: 100%;
-  }
-
-  &__nav {
+@layer header {
+  .header {
     display: flex;
-    gap: 4rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+    background-color: $primary-color;
+    box-sizing: border-box;
     
-    &--link {
-      margin: 0.5rem;
-      padding: 0.5rem;
-      font-size: $font-size-medium;
-      color: $secondary-color;
-      transition: background-color 0.3s;
-
-      &:hover {
-        color: $primary-color;
-        background-color: $secondary-color;
-        border-radius: 10rem;
-      }
-    }
-  }
-}
-
-
-@media (width <= 768px) {
-  .header {
-    justify-content: space-around;
-    gap: 3rem;
-    padding: 2rem 5rem;
-  
-    &__nav {
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
-
-@media (width <= 480px) {
-  .header {
-    gap: 2rem;
-    padding: 1rem 3rem;
-
     &__img {
       align-self: center;
       border-radius: 100%;
@@ -64,13 +16,63 @@
   
     &__nav {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.3rem;
-
+      gap: 4rem;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none;
+      
       &--link {
-        font-size: $font-size-small;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: $font-size-medium;
+        color: $secondary-color !important;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          color: $primary-color !important;
+          background-color: $secondary-color;
+          border-radius: 10rem;
+        }
+      }
+    }
+  }
+  
+  
+  @media (width <= 768px) {
+    .header {
+      justify-content: space-around;
+      gap: 3rem;
+      padding: 2rem 5rem;
+    
+      &__nav {
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  
+  
+  @media (width <= 480px) {
+    .header {
+      gap: 2rem;
+      padding: 1rem 3rem;
+  
+      &__img {
+        align-self: center;
+        border-radius: 100%;
+      }
+    
+      &__nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+  
+        &--link {
+          font-size: $font-size-small;
+        }
       }
     }
   }
